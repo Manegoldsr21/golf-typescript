@@ -1,0 +1,22 @@
+{
+  "name": "golf-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "preact": "^10.6.6",
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack serve",
+    "start": "webpack-dev-server --config=webpack.config.js --hot"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
