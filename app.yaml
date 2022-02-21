@@ -1,0 +1,31 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+service_account: golf-465@triple-poetry-341918.iam.gserviceaccount.com
+
+handlers:
+
+- url: /(.*\.css)
+  static_files: dist/\1
+  upload: dist/(.*\.css)
+  
+- url: /(.*\.html)
+  static_files: dist/\1
+  upload: dist/(.*\.html)
+
+- url: /(.*\.js)
+  static_files: dist/\1
+  upload: dist/(.*\.js)
+
+# Site root.
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+
+# Catch-all rule, responsible from handling Angular application routes (deeplinks).
+- url: /.*
+  static_files: dist/index.html
+  upload: dist/index.html
+
+skip_files:
+- ^(?!dist)
